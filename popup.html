@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visa Slot Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>🔍 Visa Slot Monitor</h1>
+      <p class="subtitle">H-1B Regular Availability Tracker</p>
+    </header>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="control-group">
+        <label>Mode:</label>
+        <div class="toggle-group">
+          <button id="fastMode" class="toggle-btn active">⚡ Fast</button>
+          <button id="slowMode" class="toggle-btn">🐢 Slow</button>
+        </div>
+      </div>
+      
+      <div class="control-group">
+        <label>Phase:</label>
+        <div class="toggle-group">
+          <button id="phase0" class="toggle-btn">Both Slots</button>
+          <button id="phase1" class="toggle-btn active">Only Biometric</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mode/Phase Info -->
+    <div class="info-box" id="infoBox">
+      <div id="modeInfo">⚡ Fast: Fixed 10s interval</div>
+      <div id="phaseInfo">📋 Only Biometric: VAC locations only</div>
+    </div>
+
+    <!-- Status -->
+    <div class="status-bar">
+      <div class="status-indicator">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusText">Stopped</span>
+      </div>
+      <div class="check-count">
+        Checks: <span id="checkCount">0</span>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button id="startBtn" class="btn btn-start">▶ Start Monitoring</button>
+      <button id="stopBtn" class="btn btn-stop" disabled>⏹ Stop</button>
+    </div>
+
+    <!-- Background Notice -->
+    <div class="background-notice">
+      ✓ Runs in background even when popup is closed
+    </div>
+
+    <!-- Email Settings -->
+    <div class="email-section">
+      <h3>📧 Email Notifications</h3>
+      <div class="email-input-group">
+        <input type="email" id="emailInput" placeholder="your@email.com" class="email-input">
+        <button id="saveEmailBtn" class="btn-save">Save</button>
+      </div>
+      <div id="emailStatus" class="email-status"></div>
+    </div>
+
+    <!-- Test Button -->
+    <div class="test-section">
+      <button id="testBtn" class="btn btn-test">🔔 Test Alert (Sound + Email)</button>
+    </div>
+
+    <!-- Results Table -->
+    <div class="results-section">
+      <h3>Recent Slots Found</h3>
+      <div class="table-container">
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>Location</th>
+              <th>Earliest</th>
+              <th>Dates</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody">
+            <tr class="no-data">
+              <td colspan="4">No recent slots detected</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Log Output -->
+    <div class="log-section">
+      <h3>Activity Log</h3>
+      <div class="log-container" id="logContainer">
+        <div class="log-entry">Waiting to start...</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>Last check: <span id="lastCheck">--</span></span>
+      <span>Next in: <span id="nextCheck">--</span>s</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
