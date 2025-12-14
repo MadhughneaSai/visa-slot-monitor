@@ -6,14 +6,6 @@ A Chrome extension that monitors H-1B visa slot availability on checkvisaslots.c
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Chrome](https://img.shields.io/badge/Chrome-Extension-yellow)
 
-## 🎬 Demo Video
-
-<a href="https://youtu.be/odOWI37qYmw" target="_blank">
-  <img src="https://img.youtube.com/vi/odOWI37qYmw/maxresdefault.jpg" alt="Watch Demo Video" width="600">
-</a>
-
-**👆 Click the image above to watch the installation & demo video**
-
 ## ✨ Features
 
 - **Real-time Monitoring** - Automatically checks for new visa slots
@@ -28,6 +20,18 @@ A Chrome extension that monitors H-1B visa slot availability on checkvisaslots.c
   - **Only Biometric** - Alert only for VAC locations
 
 ## 📦 Installation
+
+### 🎬 Video Guide
+
+<a href="https://youtu.be/odOWI37qYmw" target="_blank">
+  <img src="https://img.youtube.com/vi/odOWI37qYmw/maxresdefault.jpg" alt="Watch Installation Video" width="600">
+</a>
+
+**👆 Click to watch the installation video**
+
+---
+
+### Step-by-Step:
 
 1. **Download ZIP:** Click the green **"Code"** button above → **"Download ZIP"**
 
