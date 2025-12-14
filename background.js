@@ -23,7 +23,7 @@ let userEmail = null;
 // State
 let state = {
   isRunning: false,
-  mode: 'FAST',
+  mode: 'SLOW',
   phase: 1,
   checkCount: 0,
   previousLocations: [],

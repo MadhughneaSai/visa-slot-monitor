@@ -6,7 +6,7 @@
 // State (synced from background)
 let state = {
   isRunning: false,
-  mode: 'FAST',
+  mode: 'SLOW',
   phase: 1,
   checkCount: 0,
   logs: []
