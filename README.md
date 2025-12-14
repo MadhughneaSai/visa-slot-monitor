@@ -21,30 +21,19 @@ A Chrome extension that monitors H-1B visa slot availability on checkvisaslots.c
 
 ## 📦 Installation
 
-### Method 1: Load Unpacked (Recommended)
+1. **Download ZIP:** Click the green **"Code"** button above → **"Download ZIP"**
 
-1. **Download** this repository:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/visa-slot-monitor.git
-   ```
-   Or download as ZIP and extract
+2. **Extract:** Unzip the downloaded file
 
-2. **Open Chrome** and go to:
-   ```
-   chrome://extensions/
-   ```
+3. **Open Chrome:** Go to `chrome://extensions/`
 
-3. **Enable Developer Mode** (toggle in top-right corner)
+4. **Enable Developer Mode:** Toggle the switch in the top-right corner
 
-4. **Click "Load unpacked"** and select the `visa-slot-extension` folder
+5. **Load Extension:** Click **"Load unpacked"** → Select the extracted folder
 
-5. **Pin the extension** to your toolbar for easy access
+6. **Pin it:** Click the puzzle icon 🧩 in Chrome toolbar → Pin "Visa Slot Monitor"
 
-### Method 2: Direct ZIP Install
-
-1. Download the latest release ZIP
-2. Extract the ZIP file
-3. Follow steps 2-5 above
+✅ **Done!** Click the extension icon to start.
 
 ## 🚀 Quick Start
 
