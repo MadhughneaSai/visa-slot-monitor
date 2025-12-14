@@ -21,18 +21,6 @@ A Chrome extension that monitors H-1B visa slot availability on checkvisaslots.c
 
 ## 📦 Installation
 
-### 🎬 Video Guide
-
-<a href="https://youtu.be/odOWI37qYmw" target="_blank">
-  <img src="https://img.youtube.com/vi/odOWI37qYmw/maxresdefault.jpg" alt="Watch Installation Video" width="600">
-</a>
-
-**👆 Click to watch the installation video**
-
----
-
-### Step-by-Step:
-
 1. **Download ZIP:** Click the green **"Code"** button above → **"Download ZIP"**
 
 2. **Extract:** Unzip the downloaded file
@@ -46,6 +34,14 @@ A Chrome extension that monitors H-1B visa slot availability on checkvisaslots.c
 6. **Pin it:** Click the puzzle icon 🧩 in Chrome toolbar → Pin "Visa Slot Monitor"
 
 ✅ **Done!** Click the extension icon to start.
+
+### 🎬 Video Guide
+
+<a href="https://youtu.be/odOWI37qYmw" target="_blank">
+  <img src="https://img.youtube.com/vi/odOWI37qYmw/maxresdefault.jpg" alt="Watch Installation Video" width="600">
+</a>
+
+**👆 Click to watch the installation video**
 
 ## 🚀 Quick Start
 
