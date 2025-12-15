@@ -1,6 +1,6 @@
 # 🔍 Visa Slot Monitor
 
-A Chrome extension that monitors H-1B visa slot availability on checkvisaslots.com and sends instant alerts when slots become available.
+A Chrome extension that monitors H-1B visa slot availability and sends instant alerts when slots become available.
 
 ![Version](https://img.shields.io/badge/version-1.2.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
