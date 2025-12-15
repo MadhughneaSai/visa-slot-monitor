@@ -19,6 +19,48 @@ A Chrome extension that monitors H-1B visa slot availability on checkvisaslots.c
   - **Both Slots** - Alert on any slot
   - **Only Biometric** - Alert only for VAC locations
 
+## 🏗️ Architecture
+
+```mermaid
+flowchart TD
+    A[👤 User Opens Extension] --> B[📋 Instructions Popup]
+    B --> C[⚙️ Configure Settings]
+    C --> D{Select Mode}
+    D -->|⚡ Fast| E[10s Interval]
+    D -->|🐢 Slow| F[Random 1-60s]
+    E --> G[▶️ Start Monitoring]
+    F --> G
+    
+    G --> H[🌐 Open Background Tab]
+    H --> I[🔄 Refresh Page]
+    I --> J[📡 Content Script Scrapes]
+    J --> K{Slots Found?}
+    
+    K -->|No| L[⏸️ Wait Interval]
+    L --> I
+    
+    K -->|Yes| M{Check Phase}
+    M -->|Both Slots| N[✅ Any Slot Triggers]
+    M -->|Only Biometric| O{Has VAC?}
+    O -->|No| L
+    O -->|Yes| N
+    
+    N --> P[🚨 Trigger Alerts]
+    P --> Q[🔊 Voice: 'Slots Found']
+    P --> R[📧 Email Notification]
+    P --> S[🔔 Desktop Notification]
+    
+    Q --> L
+    R --> L
+    S --> L
+    
+    style A fill:#e94560,color:#fff
+    style P fill:#4ade80,color:#000
+    style Q fill:#fbbf24,color:#000
+    style R fill:#fbbf24,color:#000
+    style S fill:#fbbf24,color:#000
+```
+
 ## 📦 Installation
 
 1. **Download ZIP:** Click the green **"Code"** button above → **"Download ZIP"**
@@ -83,48 +125,6 @@ Email notifications are pre-configured. Simply:
 - **Fast Mode Warning:** Don't use for more than 30 minutes continuously - may trigger bot detection
 - **Keep a tab open:** The extension opens a background tab for monitoring
 - **Email limits:** Free tier allows ~200 emails/month (shared)
-
-## 🏗️ Architecture
-
-```mermaid
-flowchart TD
-    A[👤 User Opens Extension] --> B[📋 Instructions Popup]
-    B --> C[⚙️ Configure Settings]
-    C --> D{Select Mode}
-    D -->|⚡ Fast| E[10s Interval]
-    D -->|🐢 Slow| F[Random 1-60s]
-    E --> G[▶️ Start Monitoring]
-    F --> G
-    
-    G --> H[🌐 Open Background Tab]
-    H --> I[🔄 Refresh Page]
-    I --> J[📡 Content Script Scrapes]
-    J --> K{Slots Found?}
-    
-    K -->|No| L[⏸️ Wait Interval]
-    L --> I
-    
-    K -->|Yes| M{Check Phase}
-    M -->|Both Slots| N[✅ Any Slot Triggers]
-    M -->|Only Biometric| O{Has VAC?}
-    O -->|No| L
-    O -->|Yes| N
-    
-    N --> P[🚨 Trigger Alerts]
-    P --> Q[🔊 Voice: 'Slots Found']
-    P --> R[📧 Email Notification]
-    P --> S[🔔 Desktop Notification]
-    
-    Q --> L
-    R --> L
-    S --> L
-    
-    style A fill:#e94560,color:#fff
-    style P fill:#4ade80,color:#000
-    style Q fill:#fbbf24,color:#000
-    style R fill:#fbbf24,color:#000
-    style S fill:#fbbf24,color:#000
-```
 
 ## 🛠️ Technical Details
 
